@@ -1,7 +1,8 @@
 # AMX-NX-HTML5-SDK ANGULARJS 
 
 ## Introduction:
-AMX has released three different versions of the HTML SDK designed to work with AMX Netlinx Controllers Over a websocket.
+AMX has released three different versions of the HTML SDK designed to work with AMX Netlinx Controllers Over a websocket.  This version is AngularJS
+More details on AngularJS can be found here - https://angularjs.org/
 ### PLEASE NOTE:
 Configuration of a Netlinx processor is required.  This project can reside on the Netlinx processor itself (Follow directions to prepare and load the project per the instructions with the websocket module.  It can also be hosted on any web host capable of reaching the Netlinx processor.  The processor should be configured prior to beginning working with SDK and the Websocket serivce.
 
