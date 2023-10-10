@@ -1,0 +1,7 @@
+<div class="{{group._dir}}">
+    <button type="button" ng-repeat="btn in group.btns track by $index" class="btn {{btn.style}}"  ng-attr-id="{{'btn_' + btn.port + '_' + btn.channel}}">
+        <i ng-class="btn.icon"></i>
+        {{btn.text}}
+    </button>
+</div>
+<div ng-init="loaded()"></div>

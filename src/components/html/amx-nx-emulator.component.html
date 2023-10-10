@@ -1,0 +1,70 @@
+
+    <div class="card mb-2">
+        <div class="card-body">
+            <h5 class="card-title mb-4">Emulator:</h5>
+        </div>
+        <div class="card-body border border-dark mb-3 mx-2">
+            <div class="row mb-2">
+                <div class="col-6">
+                    <dl class="row">
+                        <dt class="col-sm-3"><label for="devicePort" class="form-label small">Port:</label></dt>
+                        <dd class="col-sm-9"><input type="text" id="devicePort" class="form-control" ng-model="btnProps.port"></dd>
+                    </dl>
+                </div>
+                <div class="col-6">
+                    <dl class="row">
+                        <dt class="col-sm-3"><label for="channelNumber" class="form-label small">Channel:</label></dt>
+                        <dd class="col-sm-9"><input type="text" id="channelNumber" class="form-control" ng-model="btnProps.channel"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12 d-flex justify-content-center align-items-center py-5">
+                    <amx-nx-button configuration="btnProps"></amx-nx-button>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6">
+                    <dl class="row">
+                        <dt class="col-sm-3"><label for="cbPort" class="form-label small">Port:</label></dt>
+                        <dd class="col-sm-9"><input type="text" id="cbPort" class="form-control" ng-model="cbProps.port"></dd>
+                    </dl>
+                </div>
+                <div class="col-6">
+                    <dl class="row">
+                        <dt class="col-sm-3"><label for="cbChannel" class="form-label small">Channel:</label></dt>
+                        <dd class="col-sm-9"><input type="text" id="cbChannel" class="form-control" ng-model="cbProps.channel"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12 d-flex justify-content-center align-items-center py-5">
+                    <amx-nx-checkbox configuration="cbProps"></amx-nx-checkbox>
+                </div>
+            </div>
+        </div>
+        <div class="card-body border border-dark mb-3 mx-2">
+            <div class="row">
+                <div class="col-12">
+                    <dt class="col-sm-3"><label for="levelPort" class="form-label small">Port:</label></dt>
+                    <dd class="col-sm-9"><input type="text" id="levelPort" class="form-control" ng-model="lvlProps.port"></dd>
+                </div>
+                <div class="col-12">
+                    <dt class="col-sm-3"><label for="level" class="form-label small">Level:</label></dt>
+                    <dd class="col-sm-9"><input type="text" id="level" class="form-control" ng-model="lvlProps.level"></dd>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <div class="mb-0">
+                        <label for="lvlRange" class="form-label">Current Value:</label>
+                        <amx-nx-level configuration="lvlProps"></amx-nx-level>
+                    </div>
+                    <div class="mb-0">
+                        <label for="lvlMeter" class="form-label">Current Value:</label>
+                        <amx-nx-meter configuration="lvlProps"></amx-nx-meter>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,9 @@
+
+
+
+<div>
+    <div class="form-check" ng-repeat="item in rg.list track by $index" ng-class="{'form-check-inline':rg.inline}">
+        <input type="radio" ng-attr-id="{{'radio_' + rg.listName + '_' + $index}}" ng-attr-name="{{rg.listName}}" class="form-check-input" ng-checked="item.checked">
+        <label class="form-check-label" ng-class="{'visually-hidden':!rg.labelVisible}" ng-attr-for="{{'radio_' + rg.listName + '_' + $index}}">{{item.text}}</label>
+    </div>
+</div>

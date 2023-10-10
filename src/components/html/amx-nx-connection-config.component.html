@@ -1,0 +1,31 @@
+
+    <div class="card mb-2">
+        <div class="card-body">
+            <h5 class="card-title mb-4">External Connection
+                <span class="float-end p-2 mt-1 bg-danger border border-light rounded-circle" id="connectStatus"></span>
+            </h5>
+            <dl class="row mb-2">
+                <dt class="col-sm-3"><label for="controllerAddress" class="form-label small">Controller Address:</label></dt>
+                <dd class="col-sm-9"><input type="text" id="controllerAddress" class="form-control" style="font-size:.7em" ng-model="controller.url"></dd>
+
+                <dt class="col-sm-3"><label for="controllerKey" class="form-label small">Security Key:</label></dt>
+                <dd class="col-sm-9"><textarea class="form-control" id="controllerKey" rows="5" style="font-size: .7em" ng-model="controller.key"></textarea></dd>
+
+                <dt class="col-sm-3"><label for="controllerUname" class="form-label small">Username:</label></dt>
+                <dd class="col-sm-9"><input type="text" id="controllerUname" class="form-control" ng-model="controller.username"></dd>
+
+                <dt class="col-sm-3"><label for="controllerPword" class="form-label small">Password:</label></dt>
+                <dd class="col-sm-9"><input type="text" id="controllerPword" class="form-control" ng-model="controller.password"></dd>
+
+            </dl>
+            <div class="row justify-content-end">
+                <div class="col-8 d-flex justify-content-end">
+                    <button type="button" class="btn btn-success me-1" ng-click="connect()">Connect</button>
+                    <button type="button" class="btn btn-danger" ng-click="disconnect()">Disconnect</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+

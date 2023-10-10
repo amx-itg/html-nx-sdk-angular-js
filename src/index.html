@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+
+
+
+<html lang="en" ng-app="app">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS Example Project</title>
+
+    <!-- build:css assets/css/combined.min.css -->
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="light" />
+    <link href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" id="grid" />
+    <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" type="text/css" id="icons">
+    <link href="../node_modules/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css" id="toast">
+    <link href="../node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" type="text/css" id="simplebar">
+    <link href="../node_modules/simplemde/dist/simplemde.min.css" rel="stylesheet" type="text/css" id="simplemde">
+    <link href="../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet" type="text/css" id="rangeSlider">
+    <!-- endbuild -->
+
+
+
+</head>
+<body>
+    <header class="p-2 bg-gradient bg-dark mb-0">
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <img src="assets/images/amx-logo/amx-logo-white.png" height="32" role="img" aria-label="AMX Logo">
+            </div>
+            <div class="col-9 d-flex justify-content-end">
+                <ul class="nav mb-2 mb-md-0">
+                    <li><a href="#!/channels" class="nav-link px-2 text-white">Channels</a></li>
+                    <li><a href="#!/levels" class="nav-link px-2 text-white">Levels</a></li>
+                    <li><a href="#!/files" class="nav-link px-2 text-white">Files</a></li>
+                    <li><a href="#!/emulator" class="nav-link px-2 text-white">Emulator</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a class="nav-link px-2 text-white dropdown-toggle" href="#" role="button" id="pge_nav" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Navigation
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="pge_nav">
+                                <amx-nx-button configuration="{'port':13,'channel':100,'text':'Channels', style:'bg-dark-lighten d-block'}"></amx-nx-button>
+                                <amx-nx-button configuration="{'port':13,'channel':101,'text':'Levels', style:'bg-dark-lighten d-block'}"></amx-nx-button>
+                                <amx-nx-button configuration="{'port':13,'channel':102,'text':'Files', style:'bg-dark-lighten d-block'}"></amx-nx-button>
+                                <amx-nx-button configuration="{'port':13,'channel':103,'text':'Emulator', style:'bg-dark-lighten d-block'}"></amx-nx-button>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav-link px-2 text-white" data-bs-toggle="offcanvas" data-bs-target="#log"><i class="bi bi-gear-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="log" aria-labelledby="logLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="logLabel">Connection:</h5>
+            </div>
+            <div class="offcanvas-body">
+                <amx-nx-log></amx-nx-log>
+            </div>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="container-fluid" ng-view>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ANGULAR -->
+
+    <!--build:remove-->
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="../node_modules/jsencrypt/bin/jsencrypt.min.js"></script>
+    <script src="../node_modules/jsencrypt/dev/jsencrypt.min.js"></script>
+    <script src="../node_modules/angular-websocket/dist/angular-websocket.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+    <script src="../node_modules/simplebar/dist/simplebar.min.js"></script>
+    <script src="../node_modules/simplemde/dist/simplemde.min.js"></script>
+    <script src="../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <!-- endbuild -->
+
+    <script src="assets/node_modules/angular/angular.min.js"></script>
+    <script src="assets/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="assets/node_modules/jsencrypt/bin/jsencrypt.min.js"></script>
+    <script src="assets/node_modules/jsencrypt/dev/jsencrypt.min.js"></script>
+    <script src="assets/node_modules/angular-websocket/dist/angular-websocket.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+    <script src="assets/node_modules/simplebar/dist/simplebar.min.js"></script>
+    <script src="assets/node_modules/simplemde/dist/simplemde.min.js"></script>
+    <script src="assets/node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+
+    <!--build:js assets/js/app/app-essential.min.js-->
+    <script src="assets/js/app/app.js"></script>
+    <script src="assets/js/app/router.js"></script>
+    <script src="assets/js/services/amx-nx-hcontrol.service.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- VIEWS -->
+    <!--build:js assets/js/app/app-views.min.js -->
+    <script src="assets/js/views/channels.js"></script>
+    <script src="assets/js/views/emulator.js"></script>
+    <script src="assets/js/views/files.js"></script>
+    <script src="assets/js/views/levels.js"></script>
+    <!-- endbuild -->
+
+    <!-- COMPONENTS -->
+    <!--build:js assets/js/app/app-components.min.js -->
+    <script src="components/js/amx-nx-connection-config.component.js"></script>
+    <script src="components/js/amx-nx-emulator.component.js"></script>
+    <script src="components/js/amx-nx-button.component.js"></script>
+    <script src="components/js/amx-nx-level.component.js"></script>
+    <script src="components/js/amx-nx-meter.component.js"></script>
+    <script src="components/js/amx-nx-log.component.js"></script>
+    <script src="components/js/amx-nx-checkbox.component.js"></script>
+    <script src="components/js/amx-nx-btn-grid.component.js"></script>
+    <script src="components/js/amx-nx-btn-group.component.js"></script>
+    <script src="components/js/amx-nx-cb-group.component.js"></script>
+    <script src="components/js/amx-nx-radio-group.component.js"></script>
+    <script src="components/js/amx-nx-ion-slider.component.js"></script>
+    <!-- endbuild -->
+
+
+</body>

@@ -1,0 +1,5 @@
+<div class="row {{'justify-content-' + grid.justify}} {{'gx-' + grid.marginX}} {{'gy-' + grid.marginY}}">
+    <div class="{{'col-' + grid.size}}" ng-repeat="btn in grid.btns track by $index">
+        <amx-nx-button configuration="btn"></amx-nx-button>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-1">Log File:</h5>
+    </div>
+    <div class="card-body mt-1" style="max-height: 30em" class="overflow-scroll" data-simplebar>
+        <div class="row py-1 border-bottom" ng-repeat="message in messages track by $index">
+            <div class="col-2 col-sm-3 col-lg-2 col-xl-3 col-xxl-2 d-flex align-items-center">
+                <i ng-class="message.icon"></i>
+                <span class="small ms-1">{{message.time}}</span>
+            </div>
+            <div class="col-6 d-flex align-items-center">
+                <span class="small">{{message.msgType}} {{message.path}}</span>
+            </div>
+            <div class="col-3 d-flex align-items-center ms-auto">
+                <span class="small">{{message.value}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <button class="btn btn-primary" ng-click="clearLog()">Clear Log</button>
+            </div>
+        </div>
+    </div>
+</div>
