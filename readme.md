@@ -7,11 +7,14 @@ More details on AngularJS can be found here - https://angularjs.org/
 Configuration of a Netlinx processor is required.  This project can reside on the Netlinx processor itself (Follow directions to prepare and load the project per the instructions with the websocket module.  It can also be hosted on any web host capable of reaching the Netlinx processor.  The processor should be configured prior to beginning working with SDK and the Websocket serivce.
 
 ### npm install
-Should be completed first to install dependent modules.  All dependencies are publicly available.
+ - Install latest version of node 18.16+
+ - Ensure that you have `npm`
+ - Run `npm install`
 
 ## HTML Build:
-Is completed with GULP.  In terminal use command:
-** gulp ** or ** gulp build **
+ - Run `gulp build`
+ - Runs the app in the development mode.
+ - Open [http://localhost:4200](http://localhost:4200) to view it in your browser
 
 ## HTML Configuration:
 When hosted on the Netlinx controller - the controller.json file found in ** assets/configuration/ ** should be deleted.
